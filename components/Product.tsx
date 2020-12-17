@@ -83,10 +83,13 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 const Product = () => {
+  
+  
   const classes = useStyles({})
-
   const products = useSelector((state: ProductItem[]) => state)
 
+  
+  
   return (
     <div className={classes.root}>
       {products.map((product: ProductItem) => (
@@ -113,8 +116,7 @@ const Product = () => {
               component="span"
               variant="subtitle1"
               color="inherit"
-              className={classes.imageTitle}
-            >
+              className={classes.imageTitle}>
               {product.title}
               <span className={classes.imageMarked} />
             </Typography>
